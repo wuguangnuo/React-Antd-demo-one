@@ -1,5 +1,5 @@
 import React from 'react'  
-import { Router, Route, IndexRoute, browserHistor, Link } from 'react-router'  
+import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router'  
 
 // 引入所有基础配置
 import '../config/globalConfig'
@@ -23,7 +23,7 @@ export default class RouteMap extends React.Component {
     }  
     render () {  
         return (  
-            <Router history={this.props.history}  onUpdate={this.updateHandle.bind(this)}>  
+            <Router history={browserHistory}  onUpdate={this.updateHandle.bind(this)}>  
                 <Route path='/' component={Demo1}>
                     <IndexRoute component={Tabble}/> 
                     <Route path='/tabble' component={Tabble}></Route>
